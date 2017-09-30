@@ -1,6 +1,6 @@
 var start = 0;
 var itr;
-
+var action =true;
 var stackedImagesSlider = document.getElementById('stacked-images-slider');
 var maxWidth;
 var stackedImages = document.getElementsByClassName('stacked-image');
@@ -39,7 +39,9 @@ function swap(){
 }
 
 window.addEventListener('keydown', function(e){
-
+	if(action===true)
+	{
+		action=false;
 	if(e.keyCode == 39){
 		start--;
 		swap();
@@ -47,9 +49,15 @@ window.addEventListener('keydown', function(e){
 		start++;
 		start %= stackedImagesLength;
 		swap();
+		delay
 	}
-
+	}
 });
+window.addEventListener('keyup', function(e){
+	action=true;
+	
+});
+
 
 function init(){
 
