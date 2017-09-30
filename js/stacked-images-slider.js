@@ -49,7 +49,7 @@ window.addEventListener('keydown', function(e){
 		start++;
 		start %= stackedImagesLength;
 		swap();
-		delay
+		
 	}
 	}
 });
